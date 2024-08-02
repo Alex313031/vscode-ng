@@ -17,13 +17,13 @@ jobs:
           ref: stable
       - name: Install Actions
         run: npm install --production --prefix ./actions
-      - name: Run Locker
-        uses: ./actions/locker
-        with:
-          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
-          daysSinceClose: 45
-          daysSinceUpdate: 3
-          ignoredLabel: "*out-of-scope,accessibility"
-          ignoreLabelUntil: "author-verification-requested"
-          ignoredMilestones: "Backlog Candidates"
-          labelUntil: "verified"
+     # - name: Run Locker
+     #   uses: ./actions/locker
+     #  with:
+     #     token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
+    #      daysSinceClose: 45
+     #     daysSinceUpdate: 3
+     #     ignoredLabel: "*out-of-scope,accessibility"
+    #      ignoreLabelUntil: "author-verification-requested"
+     #     ignoredMilestones: "Backlog Candidates"
+    #      labelUntil: "verified"
